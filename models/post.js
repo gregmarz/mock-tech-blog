@@ -19,10 +19,10 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    author: {
+    username: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
+        model: "User",
         key: "id",
       },
     },
@@ -35,3 +35,4 @@ Post.init(
     modelName: "post",
   }
 );
+module.exports = Post;
