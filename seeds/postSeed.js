@@ -2,7 +2,7 @@ const { Post } = require("../models");
 
 const postSeeds = async function (req, res) {
   try {
-    const blogGen = Blog.bulkCreate();
+    console.log("hello");
   } catch (err) {
     console.log(err);
   }

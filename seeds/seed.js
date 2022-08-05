@@ -1,13 +1,15 @@
 const sequelize = require("../config/connection");
-const { Blog, Post, User } = require("../models");
+const { Post, User } = require("../models");
 
-const userSeed = require("./userSeed.json");
-const blogSeed = require("./blogSeed.json");
-const postSeed = require("./postSeed.json");
+const userSeed = require("./userSeed.js");
+// const postSeed = require("./postSeed.js");
+// const commentSeeds = require("./commentSeeds.js");
 
 async function DBSEED() {
   await sequelize.sync({ force: true });
-  await blogSeed();
   await userSeed();
-  await postSeed();
+  // await postSeed();
+  // await commentSeeds();
 }
+
+DBSEED();

@@ -20,11 +20,11 @@ Post.init(
       allowNull: false,
     },
     username: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "User",
-        key: "id",
-      },
+      type: DataTypes.TEXT,
+      // references: {
+      //   model: "User",
+      //   key: "id",
+      // },
     },
   },
   {
