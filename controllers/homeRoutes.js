@@ -1,26 +1,20 @@
 const router = require("express").Router();
 const { User, Post } = require("../models");
 
-router.get("/", async (req, res) => {
-  try {
-    if (Post.findAll()) {
-      const dbpostData = await Post.findAll();
+// router.get("/", (req, res) => {
+//   const dbpostData = Post.findAll({ include: [User] }).then();
 
-      res.render("homepage", dbpostData);
-    } else {
-      res.render("homepage");
-    }
-  } catch (err) {
-    throw err;
-  }
-});
+//   res.render("homepage", dbpostData);
 
-router.get("/login", (req, res) => {
-  try {
-    res.render("login");
-  } catch (err) {
-    throw err;
-  }
-});
+//   res.render("homepage");
+// });
+
+// router.get("/login", (req, res) => {
+//   try {
+//     res.render("login");
+//   } catch (err) {
+//     throw err;
+//   }
+// });
 
 module.exports = router;
